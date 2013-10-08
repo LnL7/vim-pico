@@ -1,21 +1,38 @@
-Pico Integration for Vim
-========================
+# vim-pico
 
+This project contains some Vim configuration files to work with
+[Pico](http://pico.vub.ac.be/).
 
-# Installation
+So far it includes:
 
-This plugin uses [vundle](https://github.com/gmarik/vundle). Install vundle and then add
+- Syntax highlighting
+- Filetype detection
+- Auto indentation (still needs some work)
 
-    Bundle 'LnL7/vim-pico'
+## Installing
 
-to your *.vimrc* file. Do not forget to run `:BundleInstall` after you saved your *.vimrc*.
+If you are using the [Vundle plugin](https://github.com/gmarik/vundle)
+Add this line to your ~/.vimrc configuration file:
 
-Updates are fetched using `:BundleUpdate`.
+```
+Bundle 'LnL7/vim-pico'
+```
 
-# Usage
+And then run vim with: `vim +BundleInstall`
 
-Whenever a filename ends with **.pco** the pico syntax highlighter will be triggered. Alternatively, you can type
+Alternatively if you are running under OS X, you might want to read these instructions to
+properly install it.
 
-    :set filetype pico
+If you are using the
+[Pathogen plugin](https://github.com/tpope/vim-pathogen),
+just clone this repository in your `~/.vim/bundle` folder like so:
 
-to make the current file in the buffer a pico file.
+```
+$ cd ~/.vim/bundle
+$ git clone https://github.com/LnL7/vim-pico.git
+```
+
+## Usage
+
+Whenever a filename ends with **.pco** the pico syntax highlighter will be triggered.
+Alternatively, you can use `:setf pico` to make the current file in the buffer a pico file.
