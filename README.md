@@ -7,7 +7,7 @@ So far it includes:
 
 - Syntax highlighting
 - Filetype detection
-- Auto indentation (still needs some work)
+- Auto indentation
 
 ## Installing
 

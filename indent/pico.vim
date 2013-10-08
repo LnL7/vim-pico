@@ -35,15 +35,13 @@ function! GetPicoIndent(...)
 
     let ind += opened_symbol * &sw
 
-    if getline(lnum) =~ ':=\?\s*$'
-      if getline(v:lnum) !~ '^\s*{'
-        let ind += &sw
-      endif
+    if getline(v:lnum -1) =~ ':$'
+      let ind += &sw
     endif
 
     if getline(lnum) =~ ';'
-      let bslnum = searchpair(':=\?\s*$', '', ';', 'bnW')
-      let ind = indent(bslnum)
+      let bslnum = searchpair('{', '', '}', 'bnW')
+      let ind = indent(bslnum) + &sw
     endif
   endif
 
