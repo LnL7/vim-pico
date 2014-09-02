@@ -1,0 +1,17 @@
+{ map(Tbl, Fn(x)):
+    { i: 0;
+      res[size(Tbl)]:
+        Fn(Tbl[i:=i+1]) };
+
+  accumulate(Tbl, Acc, Fn):
+    for(i: 1, i <= size(Tbl), i:= i+1,
+      Acc:= Fn(Acc, Tbl[i]));
+
+  polynomial@Args(x):
+    f(Num):
+      accumulate(map(Args, x(Num)), 0, +);
+
+  p: polynomial(1, x, x*x);
+  display(p(1), eoln);
+  display(p(2), eoln) }
+

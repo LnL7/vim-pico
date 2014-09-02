@@ -9,6 +9,8 @@ So far it includes:
 - Filetype detection
 - Auto indentation
 
+![screenshot](https://raw.github.com/LnL7/vim-pico/master/examples/polynomial.png "Sample screenshot")
+
 ## Installing
 
 If you are using the [Vundle plugin](https://github.com/gmarik/vundle)
